@@ -1,4 +1,10 @@
 /* line 1, ../../compass/sass/style.scss */
 body {
-  background-color: #333;
+  background-color: #FFF;
+  color: black;
+}
+
+/* line 6, ../../compass/sass/style.scss */
+#image {
+  text-align: center;
 }

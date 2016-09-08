@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type='text/css' href='/stylesheets/bootstrap.min.css'>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+	<nav class='navbar navbar-default'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<a class="navbar-brand" href="#">Electric or Not?</a>
+				<ul class='nav navbar-nav'>
+					<li><a href="#">Play Game</a></li>
+					<li><a href="/standings">See Current Standings</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-12 text-center'>
+			<h1>A node.js voting game - is the electric car below really electric?</h1>
+		</div>
+	</div>	
+
+	<div class='row'>
+		<div class='col-md-12'>
+			<div id='image'>
+				<img src='/images/<%= imageToRender %>' width='600px'>
+			</div>
+		</div>
+	</div>	
+	
+	<div class='row'>
+		<div class='col-md-1 col-md-offset-3'>
+			<div class="button-holder">
+				<div class='button-form'>
+					<form class='vote-button' action='/electric' method='post'>
+						<input type='hidden' name='image' value='<%= imageToRender %>'>
+						<input type='submit' name='submit' class='btn btn-info' value='Electric!'>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class='col-md-1 col-md-offset-4'>	
+			<div class="button-holder">
+				<div class='button-form'>
+					<form class='vote-button' action='/electric' method='post'>
+						<input type='hidden' name='image' value='<%= imageToRender %>'>
+						<input type='submit' name='submit' class='btn btn-info' value='Poser'>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+</div>
+
+
+</body>
+</html>
+
+
+ 

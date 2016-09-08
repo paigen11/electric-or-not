@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type='text/css' href='/stylesheets/bootstrap.min.css'>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+	<nav class='navbar navbar-default'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				<a class="navbar-brand" href="#">Electric or Not?</a>
+				<ul class='nav navbar-nav'>
+					<li><a href="/">Play Game</a></li>
+					<li><a href="#">See Current Standings</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class='container'>
+		<div class='row'>
+				<div class='col-md-12 text-center'>
+					<h1>Electric or Not Standings</h1>
+				</div>	
+			</div>
+		</div>
+
+		<div class='row'>
+			<div class='col-md-1 col-md-offset-1'>
+				<button type='button' class='btn btn-default'><a href="/resetUserVotes">Play Again</a></button>
+			</div>
+		</div>
+		
+		<div class='row'>
+			<div class='col-md-10 col-md-offset-1'>
+				<table class='table table-striped table-bordered'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Vehicle</th>
+							<th>Total Votes</th>
+							<th>Electric Votes</th>
+							<th>Poser Votes</th>
+							<th>Electric?</th>
+						</tr>
+					</thead>
+					<tbody>	
+						
+				<% for(var i = 0; i < theStandings.length; i++){%>
+					<tr>	
+						<td><%= theStandings[i].name %></td>
+						<td><img src='/images/<%= theStandings[i].imgSrc;%>' width='300px;'>
+						<td><%= theStandings[i].totalVotes %></td>
+						<td><%= theStandings[i].electricVotes %></td>
+						<td><%= theStandings[i].poserVotes %></td>
+						<td><%= theStandings[i].yesOrNo %></td>
+					</tr>	
+				<% } %>
+
+					</tbody>		
+				</table>
+			</div>	
+		</div>
+
+	</div>	
+
+</body>
+</html>
